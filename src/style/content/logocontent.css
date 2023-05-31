@@ -1,14 +1,18 @@
-.logo-content {
-    background-color: #FFFFFF;
+  .navbar {
+    background-color: yellowgreen;
+  }
+
+  .logo-content {
     display: flex;
+    background-color: #FFFFFF;
     justify-content: center;
     align-items: center;
   }
-  
-  .logo-divider{
+
+  .logo-divider {
     border-width: 1px;
     border-style: solid;
-    border-bottom:1px solid #0000;
+    border-bottom: 1px solid #0000;
     background:
-      linear-gradient(to right,#A11CF3,#D835C5) border-box;
+      linear-gradient(to right, #A11CF3, #D835C5) border-box;
   }

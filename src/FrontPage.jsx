@@ -1,10 +1,13 @@
-import { useRef, useCallback } from 'react'
+import { useRef, useCallback, useState } from 'react'
 import Post from './Components/Post'
 import { useInfiniteQuery } from 'react-query'
 import { getPostsPage } from './api/axios'
 import logo from './assets/logo.svg'
+import { FaArrowRight, FaTimes } from 'react-icons/fa'
+
 
 const FrontPage = () => {
+    const [isNotificationOpen, setIsNotificationOpen] = useState(true)
 
     const {
         fetchNextPage,
@@ -44,37 +47,46 @@ const FrontPage = () => {
     })
 
     return (
-        <>
+        <body>
             <header className='fixed-top-bar'>
                 <div className='top-bar-content'>
                     <p className='top-bar-text'>Não limite sua criatividade, junte-se a familia Blocks por apenas <b>BRL 19,99</b></p>
-                    <button className='premium-top-bar-button' type="button">Quero ser Premium</button>
+                    <button className='premium-top-bar-button' href='./#' type="button">Quero ser Premium &nbsp;<FaArrowRight />
+                    </button>
                 </div>
+            </header>
+            <section className='navbar'>
                 <div className='logo-content'>
                     <img src={logo} alt="Blocks Logo"></img>
                 </div>
                 <div className='logo-divider'></div>
-            </header>
-            <div className='catalog-header'>
-                <div className='catalog-content'>
-                    <p className='catalog-text'>Catálogo<br />
-                        <span className='catalog-box'></span>
-                    </p>
+                <div className='catalog-header'>
+                    <div className='catalog-content'>
+                        <p className='catalog-text'>Catálogo<br />
+                            <span className='catalog-box'></span>
+                        </p>
+                    </div>
+                    <   div className='catalog-divider'></div>
                 </div>
-                <   div className='catalog-divider'></div>
-            </div>
+            </section>
+
             <div>
                 <p>Resultados</p>
                 {content}
                 {isFetchingNextPage && <p className="center">Loading More Posts...</p>}
-                <footer className="footer">
-                    <a>Sobre</a>
-                    <a>FAQ</a>
-                    <a>Termos de uso</a>
-                    <a>Politica de privacidade</a>
-                </footer>
             </div>
-        </>
+            <footer className="footer">
+                <a href='./'>Sobre</a>
+                <a href='./'>FAQ</a>
+                <a href='./'>Termos de uso</a>
+                <a href='./'>Politica de privacidade</a>
+            </footer>
+            <footer className='notification-mobile'>
+                <button className='notification-button' onClick={console.log('works')}>Fechar &nbsp;<FaTimes /></button>
+                <p className='notification-text'>Não limite sua criatividade, junte-se a familia Blocks por apenas <b>BRL 19,99</b></p>
+                <button className='premium-notification-button' href='./#' type="button">Quero ser Premium &nbsp;<FaArrowRight /></button>
+            </footer>
+        </body>
     )
 }
 

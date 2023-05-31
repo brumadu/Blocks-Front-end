@@ -1,13 +1,11 @@
 .fixed-top-bar {
-    background-color: #242424;
     z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-  }
-  
+    flex-shrink: 0;
+    }
+
   .top-bar-content {
+    background-color: #242424;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,11 +21,14 @@
   }
   
   .premium-top-bar-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition-duration: 0.4s;
       background: linear-gradient(to right, #A11CF3, #D835C5);
       border: 0;
       line-height: 225%;
-      padding: 0 15px;
+      width: 10rem;
       font-size: 16px;
       font-weight: 500;
       text-align: center;
@@ -38,5 +39,12 @@
     
   .premium-top-bar-button:hover {
     --p: 100%;
-    background: rgba(223, 172, 255, 0.1);;
+    background: rgba(223, 172, 255, 0.1);
+  }
+
+  
+  @media screen and (max-width: 800px) {
+    .top-bar-content, .top-bar-text, .premium-top-bar-button {
+      display: none;
+    }
   }
