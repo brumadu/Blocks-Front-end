@@ -39,12 +39,15 @@ const FrontPage = () => {
 
     if (status === 'error') return <p className='center'>Erro: {error.message}</p>
 
-    const content = data?.pages.map((pg, i) => {
-        if (pg.length === i + 1) {
-            return null
-        }
-        return null
+    const content = data?.pages.map(pg => {
+        return pg.map((post, i) => {
+            if (pg.length === i + 1) {
+                return <Post ref={lastPostRef} key={post.id} post={post} />
+            }
+            return <Post key={post.id} post={post} />
+        })
     })
+
 
     return (
         <body>
@@ -55,7 +58,6 @@ const FrontPage = () => {
                     </button>
                 </div>
             </header>
-            <section className='navbar'>
                 <div className='logo-content'>
                     <img src={logo} alt="Blocks Logo"></img>
                 </div>
@@ -68,11 +70,10 @@ const FrontPage = () => {
                     </div>
                     <   div className='catalog-divider'></div>
                 </div>
-            </section>
-            <div className='result'>
                 <p>Resultados</p>
+            <div className='result'>
                 {content}
-                {isFetchingNextPage && <p className="center">Loading More Posts...</p>}
+                {isFetchingNextPage && <p className="center">Carregando...</p>}
             </div>
             <footer className="footer">
                 <a href='./'>Sobre</a>

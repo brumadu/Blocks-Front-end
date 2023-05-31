@@ -1,31 +1,19 @@
 import React from 'react'
 
-const Post = React.forwardRef(({ pg }, ref) => {
+const Post = React.forwardRef(({ post }, ref) => {
 
-    const postBody = (post) => (
+    const postBody = (
         <>
-            <h2>{post.premium}</h2>
-            <p>Nome: {post.details.name}</p>
-            <p>Descrição: {post.details.description}</p>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+            <p>Post ID: {post.details.name}</p>
         </>
     )
 
-    const content = pg.map((post, i) => {
-        if (pg.length === i + 1) {
-            return (
-                <div>
-                    <article ref={ref}>{postBody(post)}</article>
-                </div>
-            )
-        }
-        return (
-            <div>
-                <article>{postBody(post)}</article>
-            </div>
-        )    }
+    const content = ref
+        ? <article ref={ref}>{postBody}</article>
+        : <article>{postBody}</article>
 
-    )
-    
     return content
 })
 

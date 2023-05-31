@@ -1,0 +1,6 @@
+
+.result {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(7, 1fr);
+  }

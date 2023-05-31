@@ -1,15 +1,14 @@
-  .navbar {
-    background-color: yellowgreen;
-  }
-
   .logo-content {
     display: flex;
     background-color: #FFFFFF;
     justify-content: center;
     align-items: center;
+    
   }
 
   .logo-divider {
+    margin-left: -200px;
+    margin-right: -200px;
     border-width: 1px;
     border-style: solid;
     border-bottom: 1px solid #0000;
