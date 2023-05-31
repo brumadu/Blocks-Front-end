@@ -3,8 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  padding-left: 60px;
-  padding-right: 60px;
 }
 
 html {
@@ -22,6 +20,13 @@ p {
   color: 202020;
   margin: 1em 0 0;
 }
+
+.article-post {
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
 
 article {
   margin: 1em;
@@ -73,9 +78,23 @@ a:focus-within {
 .top-bar-text {
   font-size: 18px;
   font-weight: 400;
+  padding-right: 20px;
   text-align: center;
   margin-bottom: 1em;
   color: #FFFFFF;
+}
+
+.premium-top-bar-button {
+    border: 0;
+    line-height: 225%;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to right, #A11CF3, #D835C5);
 }
 
 .logo-header {
@@ -86,6 +105,14 @@ a:focus-within {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo-divider{
+  border-width: 1px;
+  border-style: solid;
+  border-bottom:1px solid #0000;
+  background:
+    linear-gradient(to right,#A11CF3,#D835C5) border-box;
 }
 
 .catalog-header {
@@ -128,4 +155,7 @@ a:focus-within {
     linear-gradient(to right,#A11CF3,#D835C5) border-box;
 }
 
-
+.catalog-divider {
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #0000;
+}
