@@ -1,9 +1,10 @@
 import { useRef, useCallback, useState } from 'react'
 import Post from './Components/Post'
 import { useInfiniteQuery } from 'react-query'
-import { getPostsPage } from './api/axios'
+import { getImageId, getPostsPage } from './api/axios'
 import logo from './assets/logo.svg'
 import { FaArrowRight, FaTimes } from 'react-icons/fa'
+import useImages from './hooks/useImages'
 
 
 const FrontPage = () => {
@@ -21,6 +22,8 @@ const FrontPage = () => {
             return lastPage.length ? allPages.length + 10 : undefined
         }
     })
+
+
 
     const intObserver = useRef()
     const lastPostRef = useCallback(post => {
@@ -82,7 +85,7 @@ const FrontPage = () => {
                 <a href='./'>Politica de privacidade</a>
             </footer>
             <footer className='notification-mobile'>
-                <button className='notification-button' onClick={console.log('works')}>Fechar &nbsp;<FaTimes /></button>
+                <button className='notification-button'>Fechar &nbsp;<FaTimes /></button>
                 <p className='notification-text'>Não limite sua criatividade, junte-se a familia Blocks por apenas <b>BRL 19,99</b></p>
                 <button className='premium-notification-button' href='./#' type="button">Quero ser Premium &nbsp;<FaArrowRight /></button>
             </footer>

@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import { getImageId, getPostsPage } from '../api/axios'
+import { getImageId } from '../api/axios'
 
-const usePosts = (pageNum = 1) => {
+const useImages = (imageId = 1) => {
     const [results, setResults] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
     const [error, setError] = useState({})
-    const [hasNextPage, setHasNextPage] = useState(false)
 
     useEffect(() => {
         setIsLoading(true)
@@ -16,10 +15,9 @@ const usePosts = (pageNum = 1) => {
         const controller = new AbortController()
         const { signal } = controller
 
-        getPostsPage(pageNum, { signal })
+        getImageId(imageId, { signal })
             .then(data => {
                 setResults(prev => [...prev, ...data])
-                setHasNextPage(Boolean(data.length))
                 setIsLoading(false)
             })
             .catch(e => {
@@ -29,16 +27,11 @@ const usePosts = (pageNum = 1) => {
                 setError({ message: e.message })
             })
 
-        getImageId(idParam)
-            .then(data => {
-                
-            })
-
         return () => controller.abort()
 
-    }, [pageNum])
+    }, [imageId])
 
-    return { isLoading, isError, error, results, hasNextPage }
+    return { isLoading, isError, error, results }
 }
 
-export default usePosts
+export default useImages
