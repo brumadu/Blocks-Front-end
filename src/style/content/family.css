@@ -45,8 +45,8 @@
     .family-text {
       display: -webkit-box;
       -webkit-box-orient: initial;
-      -webkit-line-clamp: 2;    height: 100%;
-
+      -webkit-line-clamp: 2;   
+       height: 100%;
     }
   }
 
