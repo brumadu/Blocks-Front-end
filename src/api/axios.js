@@ -4,7 +4,7 @@ export const api = axios.create({
     baseURL: 'https://test-candidaturas-front-end.onrender.com/'
 })
 
-export const getPostsPage = async (pageParam = 1, skipParam = 21, options = {}) => {
+export const getPostsPage = async (pageParam = 10, skipParam = 0, options = {}) => {
     const response = await api.get(`/families?take=${pageParam}&skip=${skipParam}`, options)
     return response.data
 }

@@ -33,16 +33,21 @@
 
   .family-text {
     overflow: hidden;
-    display: -webkit-box;
-    line-height: 1em;
-    max-height: 2em;
-    -webkit-box-orient: initial;
-    -webkit-line-clamp: 2;
+    
     align-self: center;
-    height: 1.5vw;
+    height: 100%;
     width: 85%;
     font-size: 14px;
     font-weight: 600;
+  }
+
+  @media screen and (min-width: 800px) {
+    .family-text {
+      display: -webkit-box;
+      -webkit-box-orient: initial;
+      -webkit-line-clamp: 2;    height: 100%;
+
+    }
   }
 
   .family-horizontal-divider {

@@ -84,11 +84,14 @@ const FrontPage = () => {
                 <a href='./'>Termos de uso</a>
                 <a href='./'>Politica de privacidade</a>
             </footer>
+            { isNotificationOpen ? 
             <footer className='notification-mobile'>
-                <button className='notification-button'>Fechar &nbsp;<FaTimes /></button>
+                    <button className='notification-button' onClick={() => setIsNotificationOpen(false)}>Fechar &nbsp;<FaTimes /></button>
                 <p className='notification-text'>Não limite sua criatividade, junte-se a familia Blocks por apenas <b>BRL 19,99</b></p>
                 <button className='premium-notification-button' href='./#' type="button">Quero ser Premium &nbsp;<FaArrowRight /></button>
             </footer>
+            : <></>
+            }
         </body>
     )
 }

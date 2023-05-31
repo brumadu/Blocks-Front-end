@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getImageId, getPostsPage } from '../api/axios'
 
-const usePosts = (pageNum = 1) => {
+const usePosts = (pageNum = 10) => {
     const [results, setResults] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
@@ -27,11 +27,6 @@ const usePosts = (pageNum = 1) => {
                 if (signal.aborted) return
                 setIsError(true)
                 setError({ message: e.message })
-            })
-
-        getImageId(idParam)
-            .then(data => {
-                
             })
 
         return () => controller.abort()
