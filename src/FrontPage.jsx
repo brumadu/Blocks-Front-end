@@ -65,7 +65,7 @@ const FrontPage = () => {
             <div className='catalog-header'>
                 <div className='catalog-content'>
                     <p className='catalog-text safe-container'>Catálogo<br />
-                        <span className='catalog-box'></span>
+                    <span className='catalog-box'></span>
                     </p>
                 </div>
             </div>

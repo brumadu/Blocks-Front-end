@@ -28,7 +28,7 @@ body {
   bottom: 0;
 }
 
-@media screen and (min-widt:800px ) {
+@media screen and (min-width:800px ) {
   .safe-container {
     padding-left: 200px;
     padding-right: 200px;
