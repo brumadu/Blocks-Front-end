@@ -1,13 +1,19 @@
 .notification-mobile {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: #242424;
     display: grid;
     justify-content: center;
     align-items: center;
-  }
+    z-index: 1;
+    width: 100%;
+    flex-shrink: 0;
+}
 
 .notification-button {
     margin-top: 1em;
-    line-height: 300%;
+    line-height: 100%;
     background-color: #242424;
     color: #FFFFFF;
     display: flex;

@@ -69,8 +69,7 @@ const FrontPage = () => {
                     <   div className='catalog-divider'></div>
                 </div>
             </section>
-
-            <div>
+            <div className='result'>
                 <p>Resultados</p>
                 {content}
                 {isFetchingNextPage && <p className="center">Loading More Posts...</p>}
