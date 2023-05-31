@@ -27,7 +27,7 @@ Instale as dependências usando o NPM ou Yarn:
 shell
 Copy code
 npm install
-# ou
+ou
 yarn install
 
 # Uso
