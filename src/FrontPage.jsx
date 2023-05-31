@@ -58,20 +58,20 @@ const FrontPage = () => {
                     </button>
                 </div>
             </header>
-                <div className='logo-content'>
-                    <img src={logo} alt="Blocks Logo"></img>
+            <div className='logo-content'>
+                <img src={logo} alt="Blocks Logo"></img>
+            </div>
+            <div className='logo-divider'></div>
+            <div className='catalog-header'>
+                <div className='catalog-content'>
+                    <p className='catalog-text safe-container'>Catálogo<br />
+                        <span className='catalog-box'></span>
+                    </p>
                 </div>
-                <div className='logo-divider'></div>
-                <div className='catalog-header'>
-                    <div className='catalog-content'>
-                        <p className='catalog-text'>Catálogo<br />
-                            <span className='catalog-box'></span>
-                        </p>
-                    </div>
-                    <   div className='catalog-divider'></div>
-                </div>
-                <p>Resultados</p>
-            <div className='result'>
+            </div>
+            <div className='catalog-divider'></div>
+            <p className='safe-container'>Resultados</p>
+            <div className='result safe-container'>
                 {content}
                 {isFetchingNextPage && <p className="center">Carregando...</p>}
             </div>

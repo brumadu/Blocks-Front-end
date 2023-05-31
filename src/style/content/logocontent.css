@@ -7,11 +7,10 @@
   }
 
   .logo-divider {
-    margin-left: -200px;
-    margin-right: -200px;
     border-width: 1px;
     border-style: solid;
     border-bottom: 1px solid #0000;
     background:
       linear-gradient(to right, #A11CF3, #D835C5) border-box;
   }
+
