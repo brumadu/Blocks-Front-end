@@ -1,0 +1,15 @@
+.article-post {
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  article {
+    margin: 1em;
+    padding: 1em;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    border-radius: 15px;
+  }
+  
+  

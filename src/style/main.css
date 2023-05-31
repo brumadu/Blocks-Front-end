@@ -1,0 +1,23 @@
+  p {
+    color: 202020;
+    margin: 1em 0 0;
+  }
+  
+  h1 {
+    margin: 1rem;
+    color: 202020;
+  }
+  
+  h2::first-letter,
+  p::first-letter {
+    text-transform: uppercase;
+  }
+  
+  a:any-link {
+    color: FFFFFF;
+  }
+  
+  a:hover,
+  a:focus-within {
+    color: hsla(0, 0%, 96%, 0.9);
+  }

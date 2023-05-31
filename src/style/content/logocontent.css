@@ -1,0 +1,14 @@
+.logo-content {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-divider{
+    border-width: 1px;
+    border-style: solid;
+    border-bottom:1px solid #0000;
+    background:
+      linear-gradient(to right,#A11CF3,#D835C5) border-box;
+  }
